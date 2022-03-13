@@ -27,6 +27,10 @@ public class LoanApplicationService implements IService<LoanApplication> {
 		return loanApplicationRepository.findById(id).get();
 	}
 
+	public Collection<LoanApplication> findByLoanApplicantUser(String LoanApplicantUser){
+		return loanApplicationRepository.findByLoanApplicantUser(LoanApplicantUser);
+	}
+
 	@Override
 	public LoanApplication saveOrUpdate(LoanApplication LoanApplication) {
 		return loanApplicationRepository.saveAndFlush(LoanApplication);

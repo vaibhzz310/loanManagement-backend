@@ -25,8 +25,8 @@ public class LoanApplication {
 	
 	// Identifies a different user. A user who logs in is the Applicant.
     @NotNull
-    @Column(name="loanApplicantId", length=50, nullable=false, unique=false)
-	private String loanApplicantId;
+    @Column(name="loanApplicantUser", length=50, nullable=false, unique=false)
+	private String loanApplicantUser;
 	
 	@NotNull
     @Column(name="loanApplicantName", length=50, nullable=false, unique=false)
@@ -61,6 +61,10 @@ public class LoanApplication {
     @NotNull
     @Column(name="monthlyInstallment", length=50, nullable=false)
 	private Integer monthlyInstallment;
+
+    @NotNull
+    @Column(name="paybackPeriod", length=50, nullable=false)
+	private Integer paybackPeriod;
 	
 
     public Long getLoanApplicationId() {
@@ -71,12 +75,12 @@ public class LoanApplication {
         this.loanApplicationId = loanApplicationId;
     }
 
-    public String getLoanApplicantId() {
-        return this.loanApplicantId;
+    public String getLoanApplicantUser() {
+        return this.loanApplicantUser;
     }
 
-    public void setLoanApplicantId(String loanApplicantId) {
-        this.loanApplicantId = loanApplicantId;
+    public void setLoanApplicantUser(String loanApplicantUser) {
+        this.loanApplicantUser = loanApplicantUser;
     }
 
     public String getLoanApplicantName() {
@@ -143,12 +147,28 @@ public class LoanApplication {
         this.monthlyInstallment = monthlyInstallment;
     }
 
+    public Integer getPaybackPeriod() {
+        return this.paybackPeriod;
+    }
+
+    public void setPaybackPeriod(Integer paybackPeriod) {
+        this.paybackPeriod = paybackPeriod;
+    }
 
 }
 
 // Sample JSON
 // [
 //   {
-
+//     loanApplicantUser:"2018ucp1581@mnit.ac.in", 
+//     loanApplicantName:Aman, 
+//     address:"208, Sector 6, Delhi", 
+//     emailAddress:"aqsw123@gmail.com", 
+//     contactNumber:"5375846784", 
+//     loanAmount:25000, 
+//     loanStartDate:loanStartDate,
+//     loanExpiryDate:loanExpiryDate,
+//     monthlyInstallment:monthlyInstallment,
+//     paybackPeriod:paybackPeriod
 //   }
 // ]
