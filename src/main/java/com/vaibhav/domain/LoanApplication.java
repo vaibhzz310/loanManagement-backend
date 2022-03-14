@@ -63,9 +63,13 @@ public class LoanApplication {
 	private Integer monthlyInstallment;
 
     @NotNull
-    @Column(name="paybackPeriod", length=50, nullable=false)
-	private Integer paybackPeriod;
+    @Column(name="interestRate", length=50, nullable=false)
+	private Float interestRate;
 	
+    @NotNull
+    @Column(name="loanType", length=50, nullable=false, unique=false)
+	private String loanType;
+
 
     public Long getLoanApplicationId() {
         return this.loanApplicationId;
@@ -147,13 +151,23 @@ public class LoanApplication {
         this.monthlyInstallment = monthlyInstallment;
     }
 
-    public Integer getPaybackPeriod() {
-        return this.paybackPeriod;
+    public Float getInterestRate() {
+        return this.interestRate;
     }
 
-    public void setPaybackPeriod(Integer paybackPeriod) {
-        this.paybackPeriod = paybackPeriod;
+    public void setInterestRate(Float interestRate) {
+        this.interestRate = interestRate;
     }
+
+    public String getLoanType() {
+        return this.loanType;
+    }
+
+    public void setLoanType(String loanType) {
+        this.loanType = loanType;
+    }
+
+   
 
 }
 
