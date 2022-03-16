@@ -15,7 +15,11 @@ import com.vaibhav.domain.LoanApplication;
 //import com.vaibhav.resource.Resource;
 import com.vaibhav.service.LoanApplicationService;
 
+<<<<<<< HEAD
 @CrossOrigin()
+=======
+@CrossOrigin(origins = "https://loan-management-22.herokuapp.com/list")
+>>>>>>> 4997dc023cda2cee687be94ce623d680fe3bc46c
 @RestController
 @RequestMapping("/loanApplication")
 public class LoanApplicationResource implements Resource<LoanApplication> {
